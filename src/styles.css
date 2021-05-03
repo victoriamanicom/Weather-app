@@ -1,0 +1,133 @@
+body {
+  font-family: "Lora", serif;
+}
+
+h2,
+h6 {
+  color: #476269;
+}
+
+h3 {
+  text-align: center;
+  padding: 20px 0 0;
+  font-size: 25px;
+  margin: 20px 0 0;
+  opacity: 0.9;
+}
+
+h4 {
+  font-size: 15px;
+}
+
+h5,
+h6 {
+  margin: 5px 0 0;
+  font-size: 12px;
+}
+
+i {
+  background: #f1c7c1;
+  padding: 15px;
+  border-radius: 100%;
+  color: #476269;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+}
+
+ul {
+  padding: 0;
+  margin: 10px auto;
+  text-align: center;
+  background: #f1c7c1;
+  color: #476269;
+  border-radius: 4px;
+  max-width: 60%;
+  padding: 13px 20px;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  opacity: 0.9;
+}
+
+.search {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.search-bar {
+  min-width: 70%;
+}
+
+.search-button,
+#current-location {
+  font-size: 20px;
+  background: none;
+  border-style: none;
+  transition: all 200ms ease-in-out;
+}
+
+#current-location:hover {
+  border: 2px solid #476269;
+  opacity: 0.8;
+}
+
+.search-icon:hover {
+  border: 2px solid #476269;
+  opacity: 0.8;
+}
+.card {
+  width: 75%;
+  background: #faecec;
+  border-radius: 4px;
+  margin: 0 auto;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+}
+
+.current-temp {
+  font-size: 40px;
+  padding: 32px 15px;
+  background: #f1c7c1;
+  border-radius: 100%;
+  width: fit-content;
+  margin-left: auto;
+  border: 3px solid #476269;
+  opacity: 0.9;
+}
+.temperature {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+}
+
+.current-weather {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.main-icon {
+  margin: 0 auto;
+  padding: 43px;
+  font-size: 119px;
+}
+
+.forecast {
+  padding: 10px;
+  border: 1px solid #f1c7c1;
+  border-radius: 4px;
+  text-align: center;
+  margin: 30px auto;
+  max-width: 85%;
+}
+
+.card-body {
+  padding: 1rem 1rem 0;
+}
+
+#fahrenheit,
+#celcius {
+  font-size: 15px;
+}
