@@ -127,6 +127,11 @@ a {
   padding: 1rem 1rem 0;
 }
 
+.code-link {
+  color: #476269;
+  text-align: center;
+}
+
 #fahrenheit,
 #celcius {
   font-size: 15px;
