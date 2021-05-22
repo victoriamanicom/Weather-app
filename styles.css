@@ -25,7 +25,8 @@ h6 {
   font-size: 12px;
 }
 
-i {
+i,
+img {
   background: #f1c7c1;
   padding: 15px;
   border-radius: 100%;
@@ -108,9 +109,9 @@ a {
   margin: 0 auto;
 }
 
-.main-icon {
+#current-icon {
   margin: 0 auto;
-  padding: 43px;
+  padding: 23px;
   font-size: 119px;
 }
 

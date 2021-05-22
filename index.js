@@ -30,20 +30,25 @@ function updateDate() {
 updateDate();
 
 function displayWeather(response) {
-  let displaytemp = document.querySelector("#temp");
+  let displayTemp = document.querySelector("#temp");
   let temperature = Math.round(response.data.main.temp);
-  let displaydescription = document.querySelector("#desc");
+  let displayDescription = document.querySelector("#desc");
   let description = `${
     response.data.weather[0].description
   }. Feels like ${Math.round(response.data.main.feels_like)}°C.`;
-  let displaywind = document.querySelector("#wind");
+  let displayWind = document.querySelector("#wind");
   let wind = response.data.wind.speed;
-  let displayhumidity = document.querySelector("#humidity");
+  let displayHumidity = document.querySelector("#humidity");
   let humidity = response.data.main.humidity;
-  displaytemp.innerHTML = `${temperature}`;
-  displaydescription.innerHTML = `${description}`;
-  displaywind.innerHTML = `${wind}`;
-  displayhumidity.innerHTML = `${humidity}`;
+  let displayIcon = document.querySelector("#current-icon");
+  displayTemp.innerHTML = `${temperature}`;
+  displayDescription.innerHTML = `${description}`;
+  displayWind.innerHTML = `${wind}`;
+  displayHumidity.innerHTML = `${humidity}`;
+  displayIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 function searchCity(event) {
   event.preventDefault();
