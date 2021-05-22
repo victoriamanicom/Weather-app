@@ -38,9 +38,12 @@ function displayWeather(response) {
   }. Feels like ${Math.round(response.data.main.feels_like)}°C.`;
   let displaywind = document.querySelector("#wind");
   let wind = response.data.wind.speed;
+  let displayhumidity = document.querySelector("#humidity");
+  let humidity = response.data.main.humidity;
   displaytemp.innerHTML = `${temperature}`;
   displaydescription.innerHTML = `${description}`;
   displaywind.innerHTML = `${wind}`;
+  displayhumidity.innerHTML = `${humidity}`;
 }
 function searchCity(event) {
   event.preventDefault();
