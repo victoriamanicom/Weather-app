@@ -136,3 +136,7 @@ a {
 #celcius {
   font-size: 15px;
 }
+
+#desc {
+  text-transform: capitalize;
+}
