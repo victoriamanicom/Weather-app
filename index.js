@@ -6,7 +6,7 @@ let days = [
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday"
+  "Saturday",
 ];
 let currentDay = days[now.getDay()];
 let currentHour = now.getHours();
@@ -32,8 +32,15 @@ updateDate();
 function displayWeather(response) {
   let displaytemp = document.querySelector("#temp");
   let temperature = Math.round(response.data.main.temp);
+  let displaydescription = document.querySelector("#desc");
+  let description = response.data.weather[0].description;
+  let displaywind = document.querySelector("#wind");
+  let wind = response.data.wind.speed;
+  console.log(response.data.weather[0].description);
 
   displaytemp.innerHTML = `${temperature}`;
+  displaydescription.innerHTML = `${description}`;
+  displaywind.innerHTML = `${wind}`;
 }
 function searchCity(event) {
   event.preventDefault();
