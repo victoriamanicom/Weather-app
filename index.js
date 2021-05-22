@@ -33,11 +33,11 @@ function displayWeather(response) {
   let displaytemp = document.querySelector("#temp");
   let temperature = Math.round(response.data.main.temp);
   let displaydescription = document.querySelector("#desc");
-  let description = response.data.weather[0].description;
+  let description = `${
+    response.data.weather[0].description
+  }. Feels like ${Math.round(response.data.main.feels_like)}°C.`;
   let displaywind = document.querySelector("#wind");
   let wind = response.data.wind.speed;
-  console.log(response.data.weather[0].description);
-
   displaytemp.innerHTML = `${temperature}`;
   displaydescription.innerHTML = `${description}`;
   displaywind.innerHTML = `${wind}`;
