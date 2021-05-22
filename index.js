@@ -41,6 +41,7 @@ function displayWeather(response) {
   let displayHumidity = document.querySelector("#humidity");
   let humidity = response.data.main.humidity;
   let displayIcon = document.querySelector("#current-icon");
+  celciusTemperature = response.data.main.temp;
   displayTemp.innerHTML = `${temperature}`;
   displayDescription.innerHTML = `${description}`;
   displayWind.innerHTML = `${wind}`;
@@ -89,13 +90,20 @@ currentPositionButton.addEventListener("click", findCurrentLocation);
 function selectFahrenheit(event) {
   event.preventDefault();
   let temp = document.querySelector("#temp");
-  temp.innerHTML = 53.6;
+  celciusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemp = (celciusTemperature * 9) / 5 + 32;
+  temp.innerHTML = Math.round(fahrenheitTemp);
 }
 function selectCelcius(event) {
   event.preventDefault();
   let temp = document.querySelector("#temp");
-  temp.innerHTML = 12;
+  celciusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  temp.innerHTML = Math.round(celciusTemperature);
 }
+
+let celciusTemperature = null;
 
 let celciusLink = document.querySelector("#celcius");
 celciusLink.addEventListener("click", selectCelcius);

@@ -141,3 +141,8 @@ a {
 #desc {
   text-transform: capitalize;
 }
+
+.current-temp .active {
+  color: rgba(0, 0, 0, 0.9);
+  cursor: default;
+}
