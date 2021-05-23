@@ -68,6 +68,7 @@ form.addEventListener("submit", searchCity);
 
 function showPosition(response) {
   let temp = Math.round(response.data.main.temp);
+  celciusTemperature = Math.round(response.data.main.temp);
   let currentLoc = response.data.name;
   let h1 = document.querySelector("h1");
   h1.innerHTML = `${currentLoc}`;
