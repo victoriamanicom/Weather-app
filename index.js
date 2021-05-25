@@ -29,6 +29,23 @@ function updateDate() {
 
 updateDate();
 
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row forecast">`;
+  forecastHTML =
+    forecastHTML +
+    `<div class="col-sm">
+                  <h4>Sun</h4>
+                  <img src="" id="icon" />
+                  <h5 class="temperature">11°C</h5>
+                  <h6>11%</h6>
+                </div>`;
+
+  forecastHTML = forecastHTML + `</div>`;
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeather(response) {
   let displayTemp = document.querySelector("#temp");
   let temperature = Math.round(response.data.main.temp);
@@ -111,3 +128,5 @@ let celciusLink = document.querySelector("#celcius");
 celciusLink.addEventListener("click", selectCelcius);
 let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", selectFahrenheit);
+
+displayForecast();
