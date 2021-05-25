@@ -30,16 +30,19 @@ function updateDate() {
 updateDate();
 
 function displayForecast(response) {
+  let days = ["Sun", "Mon", "Tue"];
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row forecast">`;
-  forecastHTML =
-    forecastHTML +
-    `<div class="col-sm">
-                  <h4>Sun</h4>
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-sm">
+                  <h4>${day}</h4>
                   <img src="" id="icon" />
                   <h5 class="temperature">11°C</h5>
                   <h6>11%</h6>
                 </div>`;
+  });
 
   forecastHTML = forecastHTML + `</div>`;
 
