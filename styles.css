@@ -146,3 +146,8 @@ a {
   color: rgba(0, 0, 0, 0.9);
   cursor: default;
 }
+
+#icon {
+  max-width: 90px;
+  padding: 10px;
+}
